@@ -1,0 +1,81 @@
+/* src/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark Mode Styles */
+:root {
+  --dark-blue: hsl(209, 23%, 22%);
+  --very-dark-blue-bg: hsl(207, 26%, 17%);
+  --very-dark-blue-text: hsl(200, 15%, 8%);
+  --dark-gray: hsl(0, 0%, 35%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1380px;
+  }
+}
+p, ul, span, button {
+  font-weight: 600;
+}
+
+.dark {
+  background-color: var(--very-dark-blue-bg);
+  color: var(--white);
+}
+
+.dark .dark-mode-element {
+  background-color: var(--dark-blue);
+}
+
+.dark .dark-mode-text {
+  color: var(--white);
+}
+
+.light .light-mode-text {
+  color: var(--very-dark-blue-text);
+}
+
+.light .light-mode-background {
+  background-color: var(--very-light-gray);
+}
+
+.light .light-mode-input {
+  background-color: var(--dark-gray);
+}
+
+.theme-button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.theme-button-light {
+  background-color: var(--very-light-gray);
+  color: var(--very-dark-blue-text);
+}
+
+.theme-button-dark {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+/* Dark mode navbar specific styles */
+.navbar-dark-mode {
+  background-color: var(--dark-blue);
+}
+
+/* Ensure you have these custom classes defined */
+.bg-very-light-gray {
+  background-color: var(--very-light-gray);
+}
+
+.text-very-dark-blue-text {
+  color: var(--very-dark-blue-text);
+}
+
